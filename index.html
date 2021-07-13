@@ -15,23 +15,22 @@
 	</head>
 	<body>
 		<div class="page">
-			<div class="navbar">
-				<div class="logo">
+			<div class="navbar container">
+				<div class="navbar__logo">
 					<a href="/">
 						<img src="assets/images/logo/Ogma.svg" alt="Logo" />
 					</a>
 				</div>
 
-				<div class="searchbar">
+				<div class="navbar__search">
 					<input
 						type="text"
-						class="filter"
 						placeholder="O que você tá procurando?"
 					/>
-					<button class="search" disabled="disabled"></button>
+					<button type="submit"></button>
 				</div>
 
-				<div class="menu">
+				<div class="navbar__menu">
 					<div class="hamburger">
 						<div></div>
 						<div></div>
@@ -42,7 +41,7 @@
 
 			<header class="header">
 				<img
-					src="assets/images/banner/Black-Friday.svg"
+					src="assets/images/banner/black_friday.svg"
 					alt="Black Friday"
 				/>
 			</header>
@@ -50,7 +49,7 @@
 			<section class="chronometer">
 				<h2 class="title">Economize muito em ofertas especiais</h2>
 
-				<div class="timer">
+				<div class="chronometer__timer">
 					<div class="card">
 						<span class="number"> 24 </span>
 						<span class="text"> Dias </span>
@@ -75,21 +74,30 @@
 
 			<section class="newsletter">
 				<h2 class="title">Cadastre-se para receber nossas ofertas</h2>
-				<div class="register">
-					<form action="">
-						<div class="field">
-							<input type="text" name="name" />
-							<label for="name">Nome</label>
-						</div>
 
-						<div class="field">
-							<input type="e-mail" name="name" />
-							<label for="e-mail">E-mail</label>
-						</div>
+				<form class="form" action="">
+					<div class="form__field">
+						<input
+							class="form__input"
+							type="text"
+							name="name"
+							placeholder="Nome"
+						/>
+						<label class="form__label" for="name"> Nome </label>
+					</div>
 
-						<button>Cadastrar</button>
-					</form>
-				</div>
+					<div class="form__field">
+						<input
+							class="form__input"
+							type="email"
+							name="email"
+							placeholder="E-mail"
+						/>
+						<label class="form__label" for="e-mail"> E-mail </label>
+					</div>
+
+					<button class="btn">Cadastrar</button>
+				</form>
 			</section>
 
 			<section class="offers">

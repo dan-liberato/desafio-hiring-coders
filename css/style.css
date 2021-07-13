@@ -1,3 +1,13 @@
+:root {
+	--background-color: #212121;
+	--text-color: #ffffff;
+	--timer-color-text: #e4e4e4;
+	--border-color: #31f674;
+	--text-details: #31f674;
+	--background-details-color: #2a2a2a;
+	--default-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.28);
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -7,4 +17,203 @@ body {
 	font-family: "Roboto", sans-serif;
 	font-size: 100%;
 	box-sizing: border-box;
+	background: var(--background-color);
+	display: flex;
+	flex-direction: column;
+}
+
+button,
+input {
+	outline: none;
+	border: none;
+}
+
+h2 {
+	font-size: 2.25rem;
+	font-weight: bold;
+	color: var(--text-color);
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+a {
+	text-decoration: none;
+	display: block;
+}
+
+.container {
+	width: 100%;
+	max-width: 878px;
+}
+
+.btn {
+	cursor: pointer;
+	width: 276px;
+	height: 58px;
+	border-radius: 5px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.page {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+.navbar {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 50px;
+}
+.navbar__logo,
+.navbar__logo a,
+.navbar__logo a img {
+	width: 131px;
+	height: 31px;
+}
+.navbar__search {
+	position: relative;
+}
+.navbar__search input[type="text"] {
+	width: 444px;
+	height: 28px;
+	padding: 10px 0 10px 12px;
+	font-size: 1.25rem;
+	font-weight: 400;
+	color: var(--text-color);
+	background: var(--background-color);
+	border: 1px solid var(--border-color);
+	border-radius: 5px;
+	position: relative;
+}
+.navbar__search button {
+	cursor: pointer;
+	position: absolute;
+	top: 13px;
+	right: 13px;
+	background: url(../assets/images/icons/search.svg) no-repeat;
+	width: 24px;
+	height: 24px;
+}
+.navbar__menu .hamburger {
+	cursor: pointer;
+	width: 30px;
+	height: 22px;
+}
+.navbar__menu .hamburger div {
+	width: 100%;
+	height: 4px;
+	background-color: var(--border-color);
+	margin-bottom: 5px;
+}
+.navbar__menu .hamburger div:last-of-type {
+	margin-bottom: 0;
+}
+
+.header {
+	height: 754px;
+}
+.header img {
+	display: block;
+	margin: 0 auto;
+}
+
+.chronometer {
+	margin-top: 60px;
+	margin-bottom: 122px;
+}
+.chronometer__timer {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 44px;
+}
+.chronometer__timer .card {
+	width: 186.34px;
+	height: 185px;
+	border-radius: 10px;
+	background: var(--background-details-color);
+	box-shadow: var(--default-box-shadow);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.chronometer__timer .card .number,
+.chronometer__timer .card .text {
+	margin: 0 auto;
+}
+.chronometer__timer .card .number {
+	font-weight: 900;
+	font-size: 3.125rem;
+	color: var(--text-details);
+}
+.chronometer__timer .card .text {
+	font-size: 1.125;
+	color: var(--timer-color-text);
+}
+
+.newsletter {
+	width: 100%;
+	height: 290px;
+	background-color: var(--background-details-color);
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	box-shadow: var(--default-box-shadow);
+}
+.form {
+	width: 870px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.form__field {
+	width: 270px;
+	position: relative;
+}
+.form__input {
+	border: 1px solid var(--border-color);
+	border-radius: 5px;
+	background-color: var(--background-details-color);
+	color: var(--text-color);
+	padding: 0 16px;
+	width: 238px;
+	height: 58px;
+	position: relative;
+	transition: all 0.4s;
+	font-size: 1.25rem;
+	font-weight: 400;
+}
+.form__label {
+	position: absolute;
+	top: 19px;
+	left: 18px;
+	color: var(--text-color);
+}
+.form__field .form__input::placeholder {
+	opacity: 0;
+}
+.form__field:hover,
+.form__field:focus,
+.form__field > .form__input {
+	color: var(--primary);
+	transition: all 0.4s;
+}
+
+.form__field:focus-within > .form__label,
+.form__field > .form__input:not(:placeholder-shown) + .form__label {
+	top: 4px;
+	font-size: 10px;
+	color: var(--timer-color-text);
+}
+
+.form .btn {
+	background-color: var(--border-color);
 }
