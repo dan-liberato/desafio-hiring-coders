@@ -4,7 +4,236 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
 		<title>Black Friday como você nunca viu | Ogma</title>
 	</head>
-	<body></body>
+	<body>
+		<div class="page">
+			<div class="navbar">
+				<div class="logo">
+					<a href="/">
+						<img src="assets/logo/Ogma.svg" alt="Logo" />
+					</a>
+				</div>
+
+				<div class="searchbar">
+					<input
+						type="text"
+						class="filter"
+						placeholder="O que você tá procurando?"
+					/>
+					<button class="search" disabled="disabled"></button>
+				</div>
+
+				<div class="menu">
+					<div class="hamburger">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+
+			<header class="header">
+				<img src="assets/banner/Black-Friday.svg" alt="Black Friday" />
+			</header>
+
+			<section class="chronometer">
+				<h2 class="title">Economize muito em ofertas especiais</h2>
+
+				<div class="timer">
+					<div class="card">
+						<span class="number"> 24 </span>
+						<span class="text"> Dias </span>
+					</div>
+
+					<div class="card">
+						<span class="number"> 10 </span>
+						<span class="text"> Horas </span>
+					</div>
+
+					<div class="card">
+						<span class="number"> 15 </span>
+						<span class="text"> Minutos </span>
+					</div>
+
+					<div class="card">
+						<span class="number"> 50 </span>
+						<span class="text"> Segundos </span>
+					</div>
+				</div>
+			</section>
+
+			<section class="newsletter">
+				<h2 class="title">Cadastre-se para receber nossas ofertas</h2>
+				<div class="register">
+					<form action="">
+						<div class="field">
+							<input type="text" name="name" />
+							<label for="name">Nome</label>
+						</div>
+
+						<div class="field">
+							<input type="e-mail" name="name" />
+							<label for="e-mail">E-mail</label>
+						</div>
+
+						<button>Cadastrar</button>
+					</form>
+				</div>
+			</section>
+
+			<section class="offers">
+				<h2 class="title">Descontos especiais de até 80%</h2>
+
+				<div class="offers-content">
+					<div class="container">
+						<div class="first-box">
+							<div class="discount">Até 35%</div>
+							<h3>Consoles</h3>
+							<img src="assets/products/ps5.png" alt="Consoles" />
+						</div>
+
+						<div class="second-box">
+							<div class="discount">Até 70%</div>
+							<h3>Consoles</h3>
+							<img
+								src="assets/products/computador.png"
+								alt="PC"
+							/>
+						</div>
+					</div>
+
+					<div class="container">
+						<div class="third-box">
+							<div class="discount">Até 50%</div>
+							<h3>TVs e Smartphones</h3>
+							<img
+								src="assets/products/tvs-e-smartphones.png"
+								alt="TVs e Smartphones"
+							/>
+						</div>
+
+						<div class="fourth-box">
+							<div class="discount">Até 60%</div>
+							<h3>Gabientes</h3>
+							<img
+								src="assets/products/gabinete-corsair.png"
+								alt="Gabinetes"
+							/>
+						</div>
+					</div>
+
+					<div class="container">
+						<div class="fifth-box">
+							<div class="discount">Até 80%</div>
+							<h3>Games</h3>
+							<div class="brands">
+								<a href="#">
+									<img
+										src="assets/products/brands/nintendo-switch.png"
+										alt="Nintendo Switch"
+									/>
+								</a>
+								<a href="#">
+									<img
+										src="assets/products/brands/PlayStatin.png"
+										alt="PlayStation 5"
+									/>
+								</a>
+								<a href="#">
+									<img
+										src="assets/products/brands/Xbox.png"
+										alt="Xbox Series X"
+									/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="info">
+				<h2 class="title">Atendimento Especial</h2>
+
+				<div class="container">
+					<div class="support">
+						<img src="assets/icons/support.svg" alt="Antedimento" />
+						<h3>Atendimento 24/7</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit. Cras et fringilla orci. Curabitur tempor purus
+							vitae urna tempor, in laoreet nibh dictum.
+						</p>
+					</div>
+
+					<div class="shipping">
+						<img src="assets/icons/shipping.svg" alt="Envio" />
+						<h3>Envio</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit. Cras et fringilla orci. Curabitur tempor purus
+							vitae urna tempor, in laoreet nibh dictum.
+						</p>
+					</div>
+
+					<div class="warranty">
+						<img src="assets/icons/guarantee.svg" alt="Garantia" />
+						<h3>Atendimento 24/7</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit. Cras et fringilla orci. Curabitur tempor purus
+							vitae urna tempor, in laoreet nibh dictum.
+						</p>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<footer class="footer">
+			<div class="content">
+				<div class="rights">
+					© 2021, Ogma Store Ltd, Todos os direitos reservados.
+				</div>
+
+				<nav class="menu">
+					<a href="#">Privacidade</a>
+					<a href="#">Termos de Serviço</a>
+					<a href="#">Reembolso</a>
+					<a href="#">Envio</a>
+				</nav>
+			</div>
+			<div class="content">
+				<div class="back-to-top">
+					<img src="assets/icons/arrow-up.svg" alt="Volto ao topo" />
+				</div>
+
+				<div class="logo">
+					<img src="assets/logo/Ogma.svg" alt="Ogma" />
+				</div>
+
+				<div class="social-media">
+					<a href="#" title="YouTube">
+						<img src="assets/icons/youtube.svg" alt="YouTube" />
+					</a>
+					<a href="#" title="Facebook">
+						<img src="assets/icons/facebook.svg" alt="Facebook" />
+					</a>
+					<a href="#" title="Instagram">
+						<img src="assets/icons/instagram.svg" alt="Instagram" />
+					</a>
+					<a href="#" title="Telegram">
+						<img src="assets/icons/send.svg" alt="Telegram" />
+					</a>
+				</div>
+			</div>
+			<div class="by">Design and Desenvolvimento por Daniel Liberato</div>
+		</footer>
+	</body>
 </html>
