@@ -4,19 +4,14 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
-			rel="stylesheet"
-		/>
 		<link rel="stylesheet" href="css/style.css" />
+		<!-- <link rel="stylesheet" href="css/style-old.css" /> -->
 		<title>Black Friday como você nunca viu | Ogma</title>
 	</head>
 	<body>
 		<div class="page">
-			<div class="navbar container">
-				<div class="navbar__logo">
+			<div class="navbar">
+				<div class="logo">
 					<a href="/">
 						<img src="assets/images/logo/Ogma.svg" alt="Logo" />
 					</a>
@@ -40,10 +35,15 @@
 			</div>
 
 			<header class="header">
-				<img
-					src="assets/images/banner/black_friday.svg"
-					alt="Black Friday"
-				/>
+				<div class="heading">
+					<span class="heading__title heading__title--green"
+						>Black</span
+					>
+					<span class="heading__title heading__title--red"
+						>Friday</span
+					>
+				</div>
+				<p class="heading__description">Como você nunca viu!</p>
 			</header>
 
 			<section class="chronometer">
@@ -103,66 +103,108 @@
 			<section class="offers">
 				<h2 class="title">Descontos especiais de até 80%</h2>
 
-				<div class="offers-content">
-					<div class="container">
-						<div class="first-box">
-							<div class="discount">Até 35%</div>
-							<h3>Consoles</h3>
+				<div class="offers__area">
+					<div class="offers__box flex-column">
+						<div class="card card--first">
+							<div class="card__discount card__discount--color">
+								Até 35%
+							</div>
+							<h3 class="card__title card__title--color">
+								Consoles
+							</h3>
 							<img
+								class="card__image card__image--width"
 								src="assets/images/products/ps5.png"
 								alt="Consoles"
 							/>
 						</div>
 
-						<div class="second-box">
-							<div class="discount">Até 70%</div>
-							<h3>Consoles</h3>
-							<img
-								src="assets/images/products/computador.png"
-								alt="PC"
-							/>
+						<div class="card card--second">
+							<div class="card__discount card__discount--color">
+								Até 70%
+							</div>
+							<h3 class="card__title card__title--color">
+								Placas, teclados e muito mais
+							</h3>
+							<div class="inline-flex">
+								<img
+									class="card__image card__image--width"
+									src="assets/images/products/gpu.png"
+									alt="GPU"
+								/>
+								<img
+									class="card__image card__image--width"
+									src="assets/images/products/teclado.png"
+									alt="Teclado"
+								/>
+							</div>
 						</div>
 					</div>
 
-					<div class="container">
-						<div class="third-box">
-							<div class="discount">Até 50%</div>
-							<h3>TVs e Smartphones</h3>
-							<img
-								src="assets/images/products/tvs-e-smartphones.png"
-								alt="TVs e Smartphones"
-							/>
+					<div class="offers__box flex-column">
+						<div class="card card--third">
+							<div class="card__discount card__discount--color">
+								Até 50%
+							</div>
+							<h3 class="card__title card__title--color">
+								TVs e Smartphones
+							</h3>
+							<div class="inline-flex">
+								<img
+									class="card__image card__image--width"
+									src="assets/images/products/tv.png"
+									alt="TV"
+								/>
+								<img
+									class="card__image card__image--width"
+									src="assets/images/products/iphone-12-mini.png"
+									alt="iPhone 12 Mini"
+								/>
+							</div>
 						</div>
 
-						<div class="fourth-box">
-							<div class="discount">Até 60%</div>
-							<h3>Gabientes</h3>
+						<div class="card card--fourth">
+							<div class="card__discount card__discount--color">
+								Até 60%
+							</div>
+							<h3 class="card__title card__title--color">
+								Gabientes
+							</h3>
 							<img
+								class="card__image"
 								src="assets/images/products/gabinete-corsair.png"
 								alt="Gabinetes"
 							/>
 						</div>
 					</div>
 
-					<div class="container">
-						<div class="fifth-box">
-							<div class="discount">Até 80%</div>
-							<h3>Games</h3>
-							<div class="brands">
+					<div class="offers__box flex-column">
+						<div class="card card--fifth">
+							<div class="card__discount card__discount--color">
+								Até 80%
+							</div>
+							<h3 class="card__title card__title--color">
+								Games
+							</h3>
+
+							<div class="card__brands">
 								<a href="#">
 									<img
+										class="card__brands__image"
 										src="assets/images/products/brands/nintendo-switch.png"
 										alt="Nintendo Switch"
 									/>
 								</a>
 								<a href="#">
 									<img
+										class="card__brands__image"
 										src="assets/images/products/brands/PlayStatin.png"
 										alt="PlayStation 5"
 									/>
 								</a>
 								<a href="#">
 									<img
+										class="card__brands__image"
 										src="assets/images/products/brands/Xbox.png"
 										alt="Xbox Series X"
 									/>
@@ -176,40 +218,43 @@
 			<section class="info">
 				<h2 class="title">Atendimento Especial</h2>
 
-				<div class="container">
-					<div class="support">
+				<div class="info__box">
+					<div class="info__card card">
 						<img
+							class="info__card__image"
 							src="assets/images/icons/support.svg"
 							alt="Antedimento"
 						/>
-						<h3>Atendimento 24/7</h3>
-						<p>
+						<h3 class="info__card__title">Atendimento 24/7</h3>
+						<p class="info__card__description">
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit. Cras et fringilla orci. Curabitur tempor purus
 							vitae urna tempor, in laoreet nibh dictum.
 						</p>
 					</div>
 
-					<div class="shipping">
+					<div class="info__card card">
 						<img
+							class="info__card__image"
 							src="assets/images/icons/shipping.svg"
 							alt="Envio"
 						/>
-						<h3>Envio</h3>
-						<p>
+						<h3 class="info__card__title">Envio</h3>
+						<p class="info__card__description">
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit. Cras et fringilla orci. Curabitur tempor purus
 							vitae urna tempor, in laoreet nibh dictum.
 						</p>
 					</div>
 
-					<div class="warranty">
+					<div class="info__card card">
 						<img
+							class="info__card__image"
 							src="assets/images/icons/guarantee.svg"
 							alt="Garantia"
 						/>
-						<h3>Atendimento 24/7</h3>
-						<p>
+						<h3 class="info__card__title">Atendimento 24/7</h3>
+						<p class="info__card__description">
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit. Cras et fringilla orci. Curabitur tempor purus
 							vitae urna tempor, in laoreet nibh dictum.
@@ -220,31 +265,31 @@
 		</div>
 
 		<footer class="footer">
-			<div class="content">
-				<div class="rights">
-					© 2021, Ogma Store Ltd, Todos os direitos reservados.
-				</div>
-
-				<nav class="menu">
-					<a href="#">Privacidade</a>
-					<a href="#">Termos de Serviço</a>
-					<a href="#">Reembolso</a>
-					<a href="#">Envio</a>
+			<div class="footer__content">
+				<nav class="footer__menu">
+					<a href="#" class="footer__menu__item">Privacidade</a>
+					<a href="#" class="footer__menu__item">Termos de Serviço</a>
+					<a href="#" class="footer__menu__item">Reembolso</a>
+					<a href="#" class="footer__menu__item">Envio</a>
 				</nav>
 			</div>
-			<div class="content">
-				<div class="back-to-top">
+
+			<div class="footer__content">
+				<div class="footer__scrollto">
 					<img
+						class="footer__scrollto__image"
 						src="assets/images/icons/arrow-up.svg"
 						alt="Volto ao topo"
 					/>
 				</div>
 
 				<div class="logo">
-					<img src="assets/images/logo/Ogma.svg" alt="Ogma" />
+					<a href="/">
+						<img src="assets/images/logo/Ogma.svg" alt="Ogma" />
+					</a>
 				</div>
 
-				<div class="social-media">
+				<div class="footer__social__media inline-flex">
 					<a href="#" title="YouTube">
 						<img
 							src="assets/images/icons/youtube.svg"
@@ -271,7 +316,12 @@
 					</a>
 				</div>
 			</div>
-			<div class="by">Design and Desenvolvimento por Daniel Liberato</div>
+			<div class="footer__rights">
+				© 2021, Ogma Store Ltd, Todos os direitos reservados.
+			</div>
+			<div class="footer__by">
+				Design e Desenvolvimento por Daniel Liberato
+			</div>
 		</footer>
 	</body>
 </html>
