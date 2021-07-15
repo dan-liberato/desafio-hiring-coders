@@ -574,7 +574,7 @@ section:last-of-type {
 .info__card {
 	width: 260px;
 	min-height: 271px;
-	transition: ease-in 400ms;
+	transition: ease-in-out 400ms;
 	margin-bottom: 0;
 }
 .info__card__image {
