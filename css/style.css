@@ -125,7 +125,6 @@ section:last-of-type {
 	position: fixed;
 	top: 0;
 	display: none;
-	transition: all 400ms;
 }
 .modal::before {
 	z-index: 0;

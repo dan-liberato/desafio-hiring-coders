@@ -18,6 +18,7 @@
 	function handleOpenMenu() {
 		btnOpenMenu.addEventListener('click', () => {
 			menu.style.display = 'block';
+			menu.style.transition = 'all 400ms';
 			btnCloseMenu.style.display = 'block';
 		});
 
@@ -77,5 +78,4 @@
 	}
 	handleOpenMenu()
 	infoBoxMouseOver()
-
 })(document)
