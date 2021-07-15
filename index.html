@@ -5,6 +5,14 @@
 		<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="theme-color" content="#31f674" />
+		<meta
+			name="keywords"
+			content="Games, Computadores, TVs, Smartphones, Hardware, Periféricos"
+		/>
+		<meta
+			name="description"
+			content="A Ogma está preparando uma Black Friday com descontos incríveis, venha conferir e cadastre-se para ser um dos primeiros a receber nossas ofertas!"
+		/>
 		<link rel="stylesheet" href="css/style.css" />
 		<title>Black Friday como você nunca viu | Ogma</title>
 	</head>
@@ -19,7 +27,9 @@
 
 				<div class="navbar__search">
 					<input
+						class="navbar__search__input"
 						type="text"
+						name="searchkey"
 						placeholder="O que você tá procurando?"
 					/>
 					<button
@@ -29,13 +39,36 @@
 					></button>
 				</div>
 
-				<div class="navbar__menu">
-					<div class="hamburger">
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				</div>
+				<button class="hamburger" title="Menu" data-open-menu>
+					<div></div>
+					<div></div>
+					<div></div>
+				</button>
+
+				<button class="btn-close" data-close-menu>x</button>
+
+				<nav class="menu" data-menu>
+					<ul class="menu__list">
+						<li class="menu__list__item">
+							<a href="#wrapper" class="menu__list__link">Home</a>
+						</li>
+						<li class="menu__list__item">
+							<a href="#newsletter" class="menu__list__link"
+								>Não Perca!</a
+							>
+						</li>
+						<li class="menu__list__item">
+							<a href="#offers" class="menu__list__link"
+								>Descontos</a
+							>
+						</li>
+						<li class="menu__list__item">
+							<a href="#info" class="menu__list__link"
+								>Atendimento</a
+							>
+						</li>
+					</ul>
+				</nav>
 			</div>
 
 			<header class="header">
@@ -53,30 +86,30 @@
 			<section class="chronometer">
 				<h2 class="title">Economize muito em ofertas especiais</h2>
 
-				<div class="chronometer__timer">
+				<div id="coutdown" class="chronometer__timer">
 					<div class="card">
-						<span class="number"> 24 </span>
+						<span class="number days"> 24 </span>
 						<span class="text"> Dias </span>
 					</div>
 
 					<div class="card">
-						<span class="number"> 10 </span>
+						<span class="number hours"> 10 </span>
 						<span class="text"> Horas </span>
 					</div>
 
 					<div class="card">
-						<span class="number"> 15 </span>
+						<span class="number minutes"> 15 </span>
 						<span class="text"> Minutos </span>
 					</div>
 
 					<div class="card">
-						<span class="number"> 50 </span>
+						<span class="number seconds"> 50 </span>
 						<span class="text"> Segundos </span>
 					</div>
 				</div>
 			</section>
 
-			<section class="newsletter">
+			<section id="newsletter" class="newsletter">
 				<h2 class="title">Cadastre-se para receber nossas ofertas</h2>
 
 				<form class="form" data-register>
@@ -110,7 +143,7 @@
 				</form>
 			</section>
 
-			<section class="offers">
+			<section id="offers" class="offers">
 				<h2 class="title">Descontos especiais de até 80%</h2>
 
 				<div class="offers__area">
@@ -225,7 +258,7 @@
 				</div>
 			</section>
 
-			<section class="info">
+			<section id="info" class="info">
 				<h2 class="title">Atendimento Especial</h2>
 
 				<div class="info__box">
@@ -350,11 +383,7 @@
 				</div>
 			</div>
 			<div class="modal__content" data-content-modal>
-				<button
-					class="modal__content__close"
-					title="Close Modal"
-					data-close-modal
-				>
+				<button class="btn-close" title="Close" data-close-modal>
 					X
 				</button>
 				<h3 class="modal__content__title">
@@ -370,5 +399,7 @@
 			</div>
 		</div>
 		<script src="js/main.js"></script>
+		<script src="js/countdown.js"></script>
+		<script src="js/check-browser.js"></script>
 	</body>
 </html>
