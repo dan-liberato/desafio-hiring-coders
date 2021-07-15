@@ -2,14 +2,14 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#31f674" />
 		<link rel="stylesheet" href="css/style.css" />
-		<!-- <link rel="stylesheet" href="css/style-old.css" /> -->
 		<title>Black Friday como você nunca viu | Ogma</title>
 	</head>
 	<body>
-		<div class="page">
+		<div id="wrapper" class="page">
 			<div class="navbar">
 				<div class="logo">
 					<a href="/">
@@ -22,7 +22,11 @@
 						type="text"
 						placeholder="O que você tá procurando?"
 					/>
-					<button type="submit"></button>
+					<button
+						class="btn-search"
+						type="submit"
+						title="search"
+					></button>
 				</div>
 
 				<div class="navbar__menu">
@@ -75,13 +79,15 @@
 			<section class="newsletter">
 				<h2 class="title">Cadastre-se para receber nossas ofertas</h2>
 
-				<form class="form" action="">
+				<form class="form" data-register>
 					<div class="form__field">
 						<input
 							class="form__input"
 							type="text"
 							name="name"
 							placeholder="Nome"
+							data-name
+							required
 						/>
 						<label class="form__label" for="name"> Nome </label>
 					</div>
@@ -92,11 +98,15 @@
 							type="email"
 							name="email"
 							placeholder="E-mail"
+							data-email
+							required
 						/>
 						<label class="form__label" for="e-mail"> E-mail </label>
 					</div>
 
-					<button class="btn">Cadastrar</button>
+					<button class="btn btn-submit" data-submit>
+						Cadastrar
+					</button>
 				</form>
 			</section>
 
@@ -233,7 +243,7 @@
 						</p>
 					</div>
 
-					<div class="info__card card">
+					<div class="info__card">
 						<img
 							class="info__card__image"
 							src="assets/images/icons/shipping.svg"
@@ -247,7 +257,7 @@
 						</p>
 					</div>
 
-					<div class="info__card card">
+					<div class="info__card">
 						<img
 							class="info__card__image"
 							src="assets/images/icons/guarantee.svg"
@@ -275,12 +285,18 @@
 			</div>
 
 			<div class="footer__content">
-				<div class="footer__scrollto">
-					<img
-						class="footer__scrollto__image"
-						src="assets/images/icons/arrow-up.svg"
-						alt="Volto ao topo"
-					/>
+				<div class="scrollto">
+					<a
+						href="#wrapper"
+						title="Voltar ao topo"
+						class="scrollto__link"
+					>
+						<img
+							class="scrollto__image"
+							src="assets/images/icons/arrow-up.svg"
+							alt="Volto ao topo"
+						/>
+					</a>
 				</div>
 
 				<div class="logo">
@@ -323,5 +339,36 @@
 				Design e Desenvolvimento por Daniel Liberato
 			</div>
 		</footer>
+		<div class="modal" data-modal>
+			<div class="modal__content__loading" data-loading-modal>
+				Cadastrando...
+				<div class="loading">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+			<div class="modal__content" data-content-modal>
+				<button
+					class="modal__content__close"
+					title="Close Modal"
+					data-close-modal
+				>
+					X
+				</button>
+				<h3 class="modal__content__title">
+					Cadastrado realizado com sucesso!
+				</h3>
+				<p class="modal__content__description">
+					Maravilha, agora você será um dos primeiros a receber nossas
+					ofertas.
+				</p>
+				<p class="modal__content__observation">
+					Fique tranquilo, nós não gostamos de spam!
+				</p>
+			</div>
+		</div>
+		<script src="js/main.js"></script>
 	</body>
 </html>
