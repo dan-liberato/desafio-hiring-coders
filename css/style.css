@@ -33,11 +33,6 @@ input {
 	outline: none;
 	border: none;
 }
-input:-internal-autofill-previewed,
-input:-internal-autofill-selected {
-	background-color: transparent;
-	color: transparent;
-}
 
 h2 {
 	font-size: 1.45rem;
