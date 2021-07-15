@@ -1,8 +1,5 @@
-(function (doc) {
+(function (doc, win) {
 	'use strict'
-	let btnOpenMenu = document.querySelector('[data-open-menu]');
-	let btnCloseMenu = document.querySelector('[data-close-menu]');
-	let menu = document.querySelector('[data-menu]');
 	let form = doc.querySelector('[data-register]')
 	let inputName = doc.querySelector('[data-name]')
 	let inputEmail = doc.querySelector('[data-email]')
@@ -16,9 +13,12 @@
 	modal.style.display = 'none'
 
 	function handleOpenMenu() {
+		let btnOpenMenu = document.querySelector('[data-open-menu]');
+		let btnCloseMenu = document.querySelector('[data-close-menu]');
+		let menu = document.querySelector('[data-menu]');
+
 		btnOpenMenu.addEventListener('click', () => {
 			menu.style.display = 'block';
-			menu.style.transition = 'all 400ms';
 			btnCloseMenu.style.display = 'block';
 		});
 
@@ -35,24 +35,22 @@
 		}, 3500)
 	}
 
-	const handleSubmit = (event) => {
-		event.preventDefault();
-		loadingModal.style.display = 'flex'
-		if (inputName && inputEmail) {
-			saveLead(getLeads, inputName.value, inputEmail.value)
-			modal.style.display = 'flex'
-			modalContent.style.display = 'none'
-			isLoading()
-		}
-	}
-	form.addEventListener('submit', handleSubmit, false)
-
 	const saveLead = (data, name, email) => {
 		const leads = []
 		if (data) leads.push({ name, email }, ...data)
 		if (!data) leads.push({ name, email })
 		localStorage.setItem('leads', JSON.stringify(leads))
 	}
+
+	const handleSubmit = (event) => {
+		event.preventDefault();
+		loadingModal.style.display = 'flex'
+		saveLead(getLeads, inputName.value, inputEmail.value)
+		modal.style.display = 'flex'
+		modalContent.style.display = 'none'
+		isLoading()
+	}
+	form.addEventListener('submit', handleSubmit, false)
 
 	const handleCloseModal = () => {
 		modal.style.display = 'none'
@@ -76,6 +74,7 @@
 			}, false)
 		})
 	}
+
 	handleOpenMenu()
 	infoBoxMouseOver()
-})(document)
+})(document, window)

@@ -29,9 +29,14 @@ body {
 
 button,
 input {
-	background: transparent;
+	background-color: transparent;
 	outline: none;
 	border: none;
+}
+input:-internal-autofill-previewed,
+input:-internal-autofill-selected {
+	background-color: transparent;
+	color: transparent;
 }
 
 h2 {
@@ -134,7 +139,7 @@ section:last-of-type {
 	height: 100vh;
 	background-color: rgba(0, 0, 0, 0.78);
 }
-.modal__content__loading {
+.modal__loading {
 	width: 215px;
 	margin: auto;
 	display: flex;
@@ -142,6 +147,7 @@ section:last-of-type {
 	color: #7ff8a7;
 	font-family: "Montserrat", sans-serif;
 	font-size: 1.3rem;
+	text-align: center;
 	z-index: 9;
 }
 .modal__content {
@@ -158,29 +164,16 @@ section:last-of-type {
 	z-index: 1;
 	position: relative;
 }
-.modal__content__close {
-	width: 34px;
-	height: 34px;
-	border-radius: 50%;
-	background-color: #7ff8a7;
-	cursor: pointer;
-	position: absolute;
-	top: -8px;
-	right: -8px;
-	font-family: "Montserrat", sans-serif;
-	font-size: 1.3rem;
-	color: var(--text-color-black);
-}
-.modal__content__title {
+.modal__title {
 	margin: 0 auto;
 	color: var(--text-details);
 }
-.modal__content__description {
+.modal__description {
 	margin: 0 auto;
 	margin-top: 10px;
 	color: var(--text-color);
 }
-.modal__content__observation {
+.modal__observation {
 	font-size: 0.85rem;
 	font-weight: 900;
 	padding: 20px 0 0 0;
@@ -363,6 +356,7 @@ section:last-of-type {
 	color: #fd014c;
 }
 .heading__description {
+	text-align: center;
 	font-size: 1.4rem;
 	color: var(--text-color);
 }
