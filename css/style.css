@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:wght@400;500;700;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:wght@400;500;700;900&display=swap"); */
 :root {
 	--background-color: #212121;
 	--text-color: #ffffff;
@@ -361,6 +361,12 @@ section:last-of-type {
 	margin-bottom: 120px;
 }
 
+.logo,
+.logo img {
+	width: 140px;
+	height: 39px;
+}
+
 .navbar {
 	max-width: 878px;
 	display: flex;
@@ -369,12 +375,6 @@ section:last-of-type {
 	align-items: center;
 	margin-top: 50px;
 	position: relative;
-}
-.navbar__logo,
-.navbar__logo a,
-.navbar__logo a img {
-	width: 131px;
-	height: 31px;
 }
 .navbar__search {
 	position: relative;
@@ -408,7 +408,7 @@ section:last-of-type {
 	flex-flow: column;
 	justify-content: center;
 	align-items: center;
-	background: url("../assets/images/backgrounds/background-header.svg")
+	background: url("../assets/images/backgrounds/background-header.png")
 		no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -628,8 +628,9 @@ section:last-of-type {
 	height: 22px;
 	margin: 15px auto;
 }
-.footer .logo a img {
+.footer .logo img {
 	width: 100%;
+	height: auto;
 }
 .footer__social__media {
 	width: 122px;
