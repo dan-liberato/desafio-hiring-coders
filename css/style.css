@@ -73,12 +73,6 @@ section:last-of-type {
 	justify-content: center;
 	align-items: center;
 }
-
-.container {
-	width: 100%;
-	max-width: 878px;
-}
-
 .hamburger {
 	position: absolute;
 	top: 5px;
@@ -117,6 +111,95 @@ section:last-of-type {
 }
 .menu__list__link {
 	color: var(--text-color-gray);
+}
+
+.card {
+	width: 100%;
+	min-height: 335px;
+	position: relative;
+	background: var(--background-details-color);
+	box-shadow: var(--default-box-shadow);
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+.card__discount {
+	position: absolute;
+	top: -23.5px;
+	right: 20px;
+	width: 149px;
+	height: 47px;
+	border-radius: 5px;
+	font-size: 1.375rem;
+	font-weight: 700;
+	text-align: center;
+	line-height: 44px;
+	color: var(--text-color-black);
+}
+.card__title {
+	font-size: 1.2rem;
+	text-align: center;
+	margin-top: 40px;
+}
+.card__image {
+	margin: 0 auto;
+	display: block;
+}
+.card__brands {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 36px 30px 30px;
+}
+.card__brands__image {
+	width: 200px;
+}
+
+.card--second,
+.card--fourth {
+	margin-top: 25px;
+}
+.card--first .card__discount--color {
+	background-color: var(--border-color);
+}
+.card--first .card__title--color {
+	color: var(--text-details);
+}
+.card--first .card__image--width {
+	width: 200px;
+	margin: 0 auto;
+	margin-top: 50px;
+	display: block;
+}
+.card--second .card__discount--color {
+	background-color: #ad00ff;
+}
+.card--second .card__title--color {
+	color: #ad00ff;
+}
+.card--third .card__discount--color {
+	background-color: #00e0ff;
+}
+.card--third .card__title--color {
+	color: #00e0ff;
+}
+.card--third .card__image--width:first-of-type {
+	width: 200px;
+}
+.card--fourth .card__discount--color {
+	background-color: #ffe600;
+}
+.card--fourth .card__title--color {
+	color: #ffe600;
+}
+.card--fifth {
+	width: 260px;
+}
+.card--fifth .card__discount--color {
+	background-color: #ff004d;
+}
+.card--fifth .card__title--color {
+	color: #ff004d;
 }
 
 .modal {
@@ -234,7 +317,6 @@ section:last-of-type {
 		transform: translate(24px, 0);
 	}
 }
-
 .btn {
 	cursor: pointer;
 	width: 276px;
@@ -280,7 +362,6 @@ section:last-of-type {
 }
 
 .navbar {
-	/* width: 90%; */
 	max-width: 878px;
 	display: flex;
 	flex-flow: column wrap;
@@ -329,7 +410,7 @@ section:last-of-type {
 	align-items: center;
 	background: url("../assets/images/backgrounds/background-header.svg")
 		no-repeat;
-	background-size: contain;
+	background-size: cover;
 	background-position: center;
 }
 .heading {
@@ -356,33 +437,33 @@ section:last-of-type {
 	color: var(--text-color);
 }
 
-.chronometer {
+.countdown {
 	margin-top: 60px;
 	margin-bottom: 122px;
 }
-.chronometer__timer {
+.countdown__timer {
 	display: grid;
 	grid-template-rows: 1fr;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 0 20px;
 	margin: 0 10px;
 }
-.chronometer__timer .card {
+.countdown__timer .card {
 	min-height: 85px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
-.chronometer__timer .card .number,
-.chronometer__timer .card .text {
+.countdown__timer .card .number,
+.countdown__timer .card .text {
 	margin: 0 auto;
 }
-.chronometer__timer .card .number {
+.countdown__timer .card .number {
 	font-weight: 900;
 	font-size: 2rem;
 	color: var(--text-details);
 }
-.chronometer__timer .card .text {
+.countdown__timer .card .text {
 	font-size: 0.75rem;
 	color: var(--text-color-gray);
 }
@@ -462,94 +543,6 @@ section:last-of-type {
 	width: 250px;
 	min-height: 255px;
 	padding-bottom: 20px;
-}
-.card {
-	width: 100%;
-	min-height: 335px;
-	position: relative;
-	background: var(--background-details-color);
-	box-shadow: var(--default-box-shadow);
-	border-radius: 10px;
-	margin-bottom: 20px;
-}
-.card__discount {
-	position: absolute;
-	top: -23.5px;
-	right: 20px;
-	width: 149px;
-	height: 47px;
-	border-radius: 5px;
-	font-size: 1.375rem;
-	font-weight: 700;
-	text-align: center;
-	line-height: 44px;
-	color: var(--text-color-black);
-}
-.card__title {
-	font-size: 1.2rem;
-	text-align: center;
-	margin-top: 40px;
-}
-.card__image {
-	margin: 0 auto;
-	display: block;
-}
-.card__brands {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	align-items: center;
-	margin: 36px 30px 30px;
-}
-.card__brands__image {
-	width: 200px;
-}
-
-.card--second,
-.card--fourth {
-	margin-top: 25px;
-}
-.card--first .card__discount--color {
-	background-color: var(--border-color);
-}
-.card--first .card__title--color {
-	color: var(--text-details);
-}
-.card--first .card__image--width {
-	width: 200px;
-	margin: 0 auto;
-	margin-top: 50px;
-	display: block;
-}
-.card--second .card__discount--color {
-	background-color: #ad00ff;
-}
-.card--second .card__title--color {
-	color: #ad00ff;
-}
-.card--third .card__discount--color {
-	background-color: #00e0ff;
-}
-.card--third .card__title--color {
-	color: #00e0ff;
-}
-.card--third .card__image--width:first-of-type {
-	width: 200px;
-}
-.card--fourth .card__discount--color {
-	background-color: #ffe600;
-}
-.card--fourth .card__title--color {
-	color: #ffe600;
-}
-.card--fifth {
-	width: 260px;
-}
-.card--fifth .card__discount--color {
-	background-color: #ff004d;
-}
-.card--fifth .card__title--color {
-	color: #ff004d;
 }
 
 .info {
@@ -667,7 +660,7 @@ section:last-of-type {
 		align-items: flex-start;
 	}
 
-	.chronometer__timer {
+	.countdown__timer {
 		grid-template-columns: repeat(4, 1fr);
 	}
 
@@ -799,16 +792,16 @@ section:last-of-type {
 		font-size: 5rem;
 	}
 
-	.chronometer__timer {
+	.countdown__timer {
 		grid-template-columns: repeat(4, 156px);
 	}
-	.chronometer__timer .card {
+	.countdown__timer .card {
 		min-height: 156px;
 	}
-	.chronometer__timer .card .number {
+	.countdown__timer .card .number {
 		font-size: 3rem;
 	}
-	.chronometer__timer .card .text {
+	.countdown__timer .card .text {
 		font-size: 1rem;
 	}
 
@@ -880,17 +873,17 @@ section:last-of-type {
 	.header {
 		height: 754px;
 	}
-	.chronometer__timer {
+	.countdown__timer {
 		grid-template-columns: repeat(4, 186px);
 		gap: 44.8px;
 	}
-	.chronometer__timer .card {
+	.countdown__timer .card {
 		min-height: 185px;
 	}
-	.chronometer__timer .card .number {
+	.countdown__timer .card .number {
 		font-size: 3.125rem;
 	}
-	.chronometer__timer .card .text {
+	.countdown__timer .card .text {
 		font-size: 1.125rem;
 	}
 
