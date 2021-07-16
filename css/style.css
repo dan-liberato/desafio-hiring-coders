@@ -7,7 +7,7 @@
 	--border-color: #31f674;
 	--text-details: #31f674;
 	--background-details-color: #2a2a2a;
-	--default-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.28);
+	--default-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.38);
 }
 
 * {
@@ -369,9 +369,6 @@ section:last-of-type {
 }
 .chronometer__timer .card {
 	min-height: 85px;
-	border-radius: 10px;
-	background: var(--background-details-color);
-	box-shadow: var(--default-box-shadow);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
