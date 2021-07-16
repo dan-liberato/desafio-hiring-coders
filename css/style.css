@@ -24,7 +24,7 @@ body {
 	font-family: "Roboto", sans-serif;
 	font-size: 100%;
 	box-sizing: border-box;
-	background: var(--background-color);
+	background: #191b1c;
 }
 
 button,
