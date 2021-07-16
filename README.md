@@ -9,7 +9,7 @@ Fiz uma landing page para Black Friday e o design, utilizei o Figma e as tecnolo
 
 ## Para ver/testar, acesse
 
-[Ogma Store](https://ogma-store.netlify.app/)
+[Ogma Store](https://ogma-store.vercel.app/)
 
 ## Tecnologias
 
