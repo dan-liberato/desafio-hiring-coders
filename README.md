@@ -7,7 +7,7 @@
 ## Sobre o projeto
 Fiz uma landing page para Black Friday e o design, utilizei o Figma e as tecnologias, usei as sugeridas, HTML, CSS e JavaScript, mas também farei uma versão com Next, TS e Styled Components e depois vou atualizar esse README com a url do repositório.
 
-## Para ver testar, acesse
+## Para ver/testar, acesse
 
 [Ogma Store](https://ogma-store.netlify.app/)
 
