@@ -1,5 +1,5 @@
 (function (doc) {
-	const getTime = (time) => {
+	const convertDate = (time) => {
 		const total = Date.parse(time) - Date.parse(new Date())
 		const days = Math.floor(total / (1000 * 60 * 60 * 24))
 		const hours = Math.floor((total / (1000 * 60 * 60)) % 24)
@@ -8,7 +8,7 @@
 		return { total, days, hours, minutes, seconds }
 	}
 
-	const initializeCountdown = (element, time) => {
+	const countdown = (element, time) => {
 		const timer = doc.querySelector(element)
 		const days = timer.querySelector('.card .days')
 		const hours = timer.querySelector('.card .hours')
@@ -16,7 +16,7 @@
 		const seconds = timer.querySelector('.card .seconds')
 
 		function updateTime() {
-			const countdown = getTime(time)
+			const countdown = convertDate(time)
 			days.innerHTML = countdown.days
 			hours.innerHTML = countdown.hours
 			minutes.innerHTML = countdown.minutes
@@ -26,5 +26,5 @@
 		updateTime()
 		const timeInterval = setInterval(updateTime, 1000)
 	}
-	initializeCountdown('#countdown', '2021-11-26')
+	countdown('#countdown', '2021-11-26')
 })(document)
