@@ -15,7 +15,7 @@
 
 	modal.style.display = 'none'
 
-	function handleOpenMenu() {
+	function handleClickMenu() {
 		let btnOpenMenu = document.querySelector('[data-open-menu]');
 
 		btnOpenMenu.addEventListener('click', () => {
@@ -30,12 +30,14 @@
 	}
 
 	function handleClickMenuItem() {
-		menuLink.forEach(link => {
-			link.addEventListener('click', () => {
-				menu.style.display = 'none';
-				btnCloseMenu.style.display = 'none';
-			}, false);
-		})
+		if (screen.width <= 719) {
+			menuLink.forEach(link => {
+				link.addEventListener('click', () => {
+					menu.style.display = 'none';
+					btnCloseMenu.style.display = 'none';
+				}, false);
+			})
+		}
 	}
 
 	function isLoading() {
@@ -84,7 +86,7 @@
 			}, false)
 		})
 	}
-	handleOpenMenu()
+	handleClickMenu()
 	handleClickMenuItem()
 	infoBoxMouseOver()
 })(document, window)
