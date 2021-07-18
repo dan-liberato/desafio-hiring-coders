@@ -1,5 +1,8 @@
 (function (doc, win) {
 	'use strict'
+	let menu = document.querySelector('[data-menu]');
+	let menuLink = doc.querySelectorAll('.menu__list__link')
+	let btnCloseMenu = document.querySelector('[data-close-menu]');
 	let form = doc.querySelector('[data-register]')
 	let inputName = doc.querySelector('[data-name]')
 	let inputEmail = doc.querySelector('[data-email]')
@@ -14,8 +17,6 @@
 
 	function handleOpenMenu() {
 		let btnOpenMenu = document.querySelector('[data-open-menu]');
-		let btnCloseMenu = document.querySelector('[data-close-menu]');
-		let menu = document.querySelector('[data-menu]');
 
 		btnOpenMenu.addEventListener('click', () => {
 			menu.style.display = 'block';
@@ -26,6 +27,15 @@
 			menu.style.display = 'none';
 			btnCloseMenu.style.display = 'none';
 		});
+	}
+
+	function handleClickMenuItem() {
+		menuLink.forEach(link => {
+			link.addEventListener('click', () => {
+				menu.style.display = 'none';
+				btnCloseMenu.style.display = 'none';
+			}, false);
+		})
 	}
 
 	function isLoading() {
@@ -74,7 +84,7 @@
 			}, false)
 		})
 	}
-
 	handleOpenMenu()
+	handleClickMenuItem()
 	infoBoxMouseOver()
 })(document, window)
