@@ -28,11 +28,6 @@
  *  -- media 45rem
  *  -- media 60rem
 **/
-* {
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
 :root {
 	--background-color: #191b1c;
 	--background-details-color: #2a2a2a;
@@ -47,6 +42,11 @@
 	--text-color-third-card: #00e0ff;
 	--text-color-fourth-card: #ffe600;
 	--text-color-fifth-card: #ff004d;
+}
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
 }
 html {
 	scroll-behavior: smooth;
