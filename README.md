@@ -2,6 +2,8 @@
 
 ## #1 Desafio Hiring Coders #2
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9282ac1094024455a018dd3786fdf4ee)](https://app.codacy.com/gh/dan-liberato/desafio-hiring-coders?utm_source=github.com&utm_medium=referral&utm_content=dan-liberato/desafio-hiring-coders&utm_campaign=Badge_Grade_Settings)
+
 <b>Desafio</b> - Criar uma landing page para cadastro de email para recebimento de novidades e promoções, salvar os dados no localStorage.
 
 ## Sobre o projeto
