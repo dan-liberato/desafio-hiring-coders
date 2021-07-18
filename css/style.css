@@ -110,15 +110,15 @@ section {
 /* Menu */
 .menu {
 	display: none;
-	width: 233px;
+	width: 230px;
 	background: var(--background-details-color);
 	padding: 20px;
 	position: absolute;
 	left: 0;
 	top: 50px;
 	border-radius: 10px;
-	box-shadow: var(--default-box-shadow);
-	transition: ease-in 0.8ms;
+	border: 2px solid var(--detail-color);
+    box-shadow: 0 0 15px var(--border-color);
 }
 .menu__list {
 	list-style: none;
@@ -252,7 +252,7 @@ section {
 	margin-bottom: 25px;
 }
 .form__input {
-	border: 1px solid var(--border-color);
+	border: 1px solid var(--detail-color);
 	border-radius: 5px;
 	background: transparent;
 	color: var(--detail-color);
@@ -260,12 +260,13 @@ section {
 	width: 220px;
 	height: 48px;
 	position: relative;
-	transition: ease 8ms;
+	transition: ease 6ms;
 	font-size: 1.25rem;
 	font-weight: 400;
 	z-index: 2;
 }
 .form__label {
+	background: transparent;
 	position: absolute;
 	top: 12px;
 	left: 17px;
@@ -323,18 +324,17 @@ section {
 }
 .modal__content {
 	width: 215px;
-	border-radius: 10px;
-	box-shadow: var(--default-box-shadow);
+	height: 190px;
 	margin: auto;
 	padding: 20px;
-	height: 190px;
 	background: var(--background-details-color);
 	display: none;
 	flex-flow: column;
 	justify-content: center;
 	z-index: 1;
 	position: relative;
-	    border: 2px solid var(--detail-color);
+	border-radius: 10px;
+	border: 2px solid var(--detail-color);
     box-shadow: 0 0 15px var(--border-color);
 }
 .modal__title {
@@ -531,7 +531,8 @@ section {
 }
 .navbar .btn-close {
 	display: none;
-	top: 35px;
+	top: 40px;
+	right: -3px;
 	padding-bottom: 2px;
 	z-index: 15;
 }
@@ -809,12 +810,13 @@ section {
 	.menu {
 		width: 100%;
 		padding: 10px 0;
+		border: none;
 		background-color: transparent;
 		box-shadow: none;
+		border-radius: 10px;
 		position: relative;
 		right: 0;
 		top: 10px;
-		border-radius: 10px;
 		display: flex;
 		justify-content: flex-end;
 		align-items: flex-end;
