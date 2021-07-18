@@ -1,5 +1,5 @@
 (function (doc, win) {
-	'use strict'
+	'use strict';
 	let menu = document.querySelector('[data-menu]');
 	let menuLink = doc.querySelectorAll('.menu__list__link');
 	let btnCloseMenu = document.querySelector('[data-close-menu]');
