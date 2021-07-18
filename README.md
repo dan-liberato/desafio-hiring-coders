@@ -1,4 +1,9 @@
 ![Screenshot](screenshot.png)
+<div style="display: flex; justify-content: center; align-items: center;">
+
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/84ac2a0492ba440595e7de2bb69a5a2d)](https://www.codacy.com/gh/dan-liberato/desafio-hiring-coders/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dan-liberato/desafio-hiring-coders&amp;utm_campaign=Badge_Grade)
+
+</div>
 
 ## #1 Desafio Hiring Coders #2
 
