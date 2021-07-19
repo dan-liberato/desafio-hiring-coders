@@ -27,5 +27,5 @@
 		updateTime();
 		const timeInterval = setInterval(updateTime, 1000);
 	};
-	countdown('#countdown', '2021-11-26');
+	countdown('#countdown', 'November 26 2021');
 })(document);
